@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const auth = require('./middleware/auth');
-const { db, logAction, seedDatabase } = require('./db');
+const { db, logAction } = require('./db');
 const path = require('path');
 
 const app = express();
@@ -26,11 +26,6 @@ app.use(cors({
   origin: 'http://localhost:5173',
   credentials: true
 }));
-
-// Seed the database when the server starts
-seedDatabase().catch(err => {
-  console.error('Error seeding database:', err);
-});
 
 // API routes
 // Add this new endpoint for fetching activity logs

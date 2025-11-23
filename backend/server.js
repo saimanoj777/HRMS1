@@ -22,10 +22,7 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 
 // CORS next
-app.use(cors({
-  origin: 'http://localhost:5173',
-  credentials: true
-}));
+app.use(cors());
 
 // Seed the database when the server starts
 seedDatabase().catch(err => {

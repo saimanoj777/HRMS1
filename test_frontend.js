@@ -2,7 +2,7 @@ const axios = require('axios');
 
 // Test direct backend API connection
 const api = axios.create({
-  baseURL: 'http://localhost:3001/api'
+  baseURL: 'http://localhost:3001/api || "https://hrms-backend-w91k.onrender.com/api"'
 });
 
 async function testRegistration() {

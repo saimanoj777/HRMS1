@@ -89,6 +89,14 @@ export default function Login({ setToken, setUser }) {
         </button>
       </form>
       
+      <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+        <h3 className="text-lg font-semibold text-black-800 mb-2">Demo Credentials</h3>
+        <div className="space-y-1">
+          <p className="text-black-700"><span className="font-medium">Username:</span> admin</p>
+          <p className="text-black-700"><span className="font-medium">Password:</span> 123456</p>
+        </div>
+      </div>
+      
       <p className="mt-4 text-center text-gray-600">
         No account? <Link to="/register" className="text-blue-600 hover:text-blue-800 font-medium">Register</Link>
       </p>
